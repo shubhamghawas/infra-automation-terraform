@@ -29,12 +29,6 @@ variable "function_app_name" {
   description = "Name of the function app to create."
   type        = string
 }
-
-variable "app_service_plan_id" {
-  description = "ID of the app service plan to use for the function app."
-  type        = string
-}
-
 variable "app_settings" {
   description = "Map of app settings to configure for the function app."
   type        = map(string)
