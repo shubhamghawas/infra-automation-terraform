@@ -24,5 +24,5 @@ variable "vnet_address_space" {
 }
 variable "acr_name" {
   type = string
-  default = "cie-dev-acr"
+  default = "ciedevacr"
 }
