@@ -25,7 +25,7 @@ module "function_app" {
   source                   = "./Modules/Function"
   resource_group_name      = var.resource_group_name
   location                 = var.location
-  storage_account_name     = "ciedevstorageaccountforfunctionapp"
+  storage_account_name     = "ciedevsaforfunctionapp"
   function_app_name        = "cie-dev-domain-service-booking"
   app_settings             = {
     "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
