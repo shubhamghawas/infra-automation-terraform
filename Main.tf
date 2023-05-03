@@ -21,3 +21,13 @@ module "acr" {
   resource_group_name = azurerm_resource_group.rg1.name
   location = var.location
 }
+module "function_app" {
+  source                   = "./Modules/Function"
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
+  storage_account_name     = "ciedevstorageaccountforfunctionapp"
+  function_app_name        = "cie-dev-domain-service-booking"
+  app_settings             = {
+    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+  }
+}
