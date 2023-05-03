@@ -46,7 +46,7 @@ variable "dotnet_framework_version" {
   type        = string
   default     = "v6.0"
 }
-variable "app-service-plan-name" {
-  type = string
-  default = "cie-dev-app-service-plan"
-}
+# variable "app-service-plan-name" {
+#   type = string
+#   default = "cie-dev-app-service-plan"
+# }

@@ -21,12 +21,52 @@ module "acr" {
   resource_group_name = azurerm_resource_group.rg1.name
   location = var.location
 }
-module "function_app" {
+module "function_app01" {
   source                   = "./Modules/Function"
   resource_group_name      = azurerm_resource_group.rg1.name
   location                 = var.location
-  storage_account_name     = "ciedevsaforfunctionapp"
+  storage_account_name     = "ciedevsaforfunctionapp01"
   function_app_name        = "cie-dev-domain-service-booking"
+  app_settings             = {
+    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+  }
+}
+module "function_app02" {
+  source                   = "./Modules/Function"
+  resource_group_name      = azurerm_resource_group.rg1.name
+  location                 = var.location
+  storage_account_name     = "ciedevsaforfunctionapp02"
+  function_app_name        = "cie-dev-domain-service-checkin"
+  app_settings             = {
+    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+  }
+}
+module "function_app03" {
+  source                   = "./Modules/Function"
+  resource_group_name      = azurerm_resource_group.rg1.name
+  location                 = var.location
+  storage_account_name     = "ciedevsaforfunctionapp03"
+  function_app_name        = "cie-dev-domain-service-update-availability"
+  app_settings             = {
+    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+  }
+}
+module "function_app04" {
+  source                   = "./Modules/Function"
+  resource_group_name      = azurerm_resource_group.rg1.name
+  location                 = var.location
+  storage_account_name     = "ciedevsaforfunctionapp04"
+  function_app_name        = "cie-dev-service-eventproxy"
+  app_settings             = {
+    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
+  }
+}
+module "function_app05" {
+  source                   = "./Modules/Function"
+  resource_group_name      = azurerm_resource_group.rg1.name
+  location                 = var.location
+  storage_account_name     = "ciedevsaforfunctionapp05"
+  function_app_name        = "cie-dev-service-eventsync"
   app_settings             = {
     "FUNCTIONS_WORKER_RUNTIME" = "dotnet"
   }
