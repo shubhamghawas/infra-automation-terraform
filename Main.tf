@@ -23,7 +23,7 @@ module "acr" {
 }
 module "function_app" {
   source                   = "./Modules/Function"
-  resource_group_name      = var.resource_group_name
+  resource_group_name      = azurerm_resource_group.rg1.name
   location                 = var.location
   storage_account_name     = "ciedevsaforfunctionapp"
   function_app_name        = "cie-dev-domain-service-booking"
