@@ -22,8 +22,4 @@ resource "azurerm_function_app" "fa" {
   storage_account_name      = azurerm_storage_account.sa.name
   storage_account_access_key = azurerm_storage_account.sa.primary_access_key
   app_settings              = var.app_settings
-  site_config {
-    always_on        = var.always_on
-    dotnet_framework = var.dotnet_framework_version
-  }
 }
