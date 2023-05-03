@@ -25,11 +25,11 @@ variable "acr_admin_enabled" {
   default     = false
 }
 
-variable "acr_georeplication_locations" {
-  description = "List of locations to replicate the ACR data to."
-  type        = list(string)
-  default     = []
-}
+# variable "acr_georeplication_locations" {
+#   description = "List of locations to replicate the ACR data to."
+#   type        = list(string)
+#   default     = []
+# }
 
 variable "acr_tags" {
   description = "Tags to apply to the ACR resource."

@@ -9,6 +9,5 @@ resource "azurerm_container_registry" "acr" {
   location                 = azurerm_resource_group.rg.location
   sku                      = var.acr_sku
   admin_enabled            = var.acr_admin_enabled
-  georeplication_locations = var.acr_georeplication_locations
   tags                     = var.acr_tags
 }
